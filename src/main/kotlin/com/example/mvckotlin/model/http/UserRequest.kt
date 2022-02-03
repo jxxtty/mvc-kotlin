@@ -10,7 +10,6 @@ data class UserRequest(
     var age: Int? = null,
     var email: String? = null,
     var address: String? = null,
-
     //@JsonProperty("phone_number") // object mapper에게 json naming은 이런이름으로 들어올거야 라고 알려주는 것
     var phoneNumber: String? = null
 )

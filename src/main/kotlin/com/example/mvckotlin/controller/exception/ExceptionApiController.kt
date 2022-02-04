@@ -32,9 +32,10 @@ class ExceptionApiController {
     }
 
     @GetMapping("/hello2")
-    fun hello2() {
+    fun hello2(): String {
         val list = mutableListOf<String>()
-        var temp = list[0]
+        //var temp = list[0]
+        return "hello" // test를 위한 코드 변경
     }
 
     // controller 내부에 @ExceptionHandler가 있으면, 얘를 탄다. (GlobalControllerAdvice를 타는게 아니라)

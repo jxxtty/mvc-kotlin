@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 
 @RestControllerAdvice // RestController에서 발생하는 exception들이 모두 여기서 처리된다
 // @RestControllerAdvice(basePackageClasses = [ExceptionApiController::class])   이렇게 쓰면 ExceptionApiController에 있는 예외만 잡아서 처리한다
+// 위에꺼처럼 명시해서 사용하는 것이 좋다.
 class GlobalControllerAdvice {
 
     // 여기를 통해 Exception이 처리되게 되면 200 Ok로 응답이 떨어진다.

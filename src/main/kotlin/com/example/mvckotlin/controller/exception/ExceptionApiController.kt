@@ -92,7 +92,7 @@ class ExceptionApiController {
         return userRequest
     }
 
-    @ExceptionHandler(value = [MethodArgumentNotValidException::class])
+    @ExceptionHandler(value = [MethodArgumentNotValidException::class]) // 글로벌하게 처리해줘도 된다. - 이걸로 잡히는건 내려주는형태가 거의 동일하기 때문에
     fun methodArgumentNotValidException(e: MethodArgumentNotValidException, request: HttpServletRequest): ResponseEntity<ErrorResponse> {
         val errors = mutableListOf<Error>()
 
